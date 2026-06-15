@@ -1,134 +1,260 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KÔKEStudio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aplicativo Jardino</title>
 
-  <!-- Google Fonts: Outfit (corpo) + DM Serif Display (destaque) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <!-- Google Font: Quicksand (rounded, geométrica, estilo amigável) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css" />
-<link rel="icon" type="image/png" href="assets/kokedamaLanding.png">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!--NAVBAR-->
+  <!-- =========================================================
+       NAVBAR
+       - Logo: troque "images/logo.png" pelo logo oficial do app
+       - Botão "Experimente Grátis": troque href="#" pelo link do TestFlight
+  ========================================================== -->
   <header class="navbar">
-    <a href="#" class="navbar__logo">
-      <span class="logo-bold">KÔKE</span><span class="logo-light">Studio</span>
-    </a>
-      <!-- substituir o # pelo link do testFlight --> 
-    <a href="" class="btn btn--outline navbar__cta">Ir para <strong>TestFlight</strong></a>
+    <div class="container navbar__inner">
+
+      <a href="#" class="navbar__logo">
+        <img src="assets/logo.png" alt="Logo JARDINO" class="navbar__logo-img">
+        <span class="navbar__logo-text">JARDINO</span>
+      </a>
+
+      <!-- TROCAR AQUI: link do TestFlight -->
+      <a href="#" class="btn btn--pill">Experimente <strong>Grátis</strong></a>
+
+    </div>
   </header>
 
+  <!-- =========================================================
+       HERO SECTION
+       - QR Code: troque "images/qrcode.png" pelo QR Code real do TestFlight
+       - Mockup: troque "images/mockup-hero.png" pela imagem do app
+  ========================================================== -->
   <section class="hero">
-    <div class="hero__content">
-      <h1 class="hero__title">
-        <span class="title-bold">KÔKE</span><span class="title-light">Studio</span>
-      </h1>
-      <p class="hero__subtitle">Visualize a natureza no seu espaço</p>
+    <div class="container hero__inner">
 
-      <!-- substituir o # pelo link do testFlight --> 
-      <a href="https://testflight.apple.com/join/9m7BkkvJ" class="btn btn--primary hero__cta">Baixar no TestFlight</a>
-    </div>
+      <div class="hero__content">
 
-    <div class="hero__illustration">
+        <div class="hero__title-row">
+          <h1 class="hero__title">JARDINO</h1>
+          <img src="assets/logo.png" alt="" class="hero__logo-icon" aria-hidden="true">
+        </div>
 
-      <img
-        src="assets/kokedamaLanding.png"
-        alt="Kokedama — planta decorativa japonesa"
-        class="hero__img"
-      />
+        <p class="hero__subtitle">Descubra sua planta ideal</p>
+
+        <!-- TROCAR AQUI: QR Code do TestFlight -->
+        <img src="assets/qrcode.png" alt="QR Code para baixar o app JARDINO" class="hero__qrcode">
+
+      </div>
+
+      <div class="hero__image">
+        <!-- TROCAR AQUI: print/mockup do app -->
+        <img src="assets/mockupUm.png" alt="Tela do app JARDINO mostrando a composição Pacová">
+      </div>
+
     </div>
   </section>
 
-  <section class="about" id="sobre">
-    <div class="about__inner">
-      <h2 class="section-title">
-        Sobre o <strong>KÔKEStudio</strong>
-      </h2>
+  <!-- =========================================================
+       SOBRE O JARDINO
+  ========================================================== -->
+  <section class="about">
+    <div class="container about__inner">
 
-      <p class="about__text">
-        O nosso app transforma a forma como você cuida das plantas.
-      </p>
-      <p class="about__text">
-        Crie kokedamas personalizadas, visualize em AR
-        e receba dicas inteligentes para manter sua
-        planta sempre saudável.
-      </p>
+      <div class="about__image">
+        <!-- TROCAR AQUI: mockups das telas do app -->
+        <img src="assets/mockupDois.png" alt="Telas do app JARDINO mostrando composições de plantas">
+      </div>
 
-      <hr class="about__divider" />
+      <div class="about__content">
+        <h2 class="section-title">Sobre o <strong>JARDINO</strong></h2>
+
+        <p>O JARDINO transforma como você cuida das suas plantas.</p>
+
+        <p>Crie composições personalizadas, visualize em Realidade Aumentada e receba dicas inteligentes para manter sua planta sempre saudável.</p>
+      </div>
+
     </div>
   </section>
 
-  <section class="features" id="recursos">
-    <div class="features__inner">
-      <h2 class="section-title">
-        Nossos <strong>Recursos</strong>
-      </h2>
+  <!-- =========================================================
+       NOSSOS RECURSOS — Cards de recursos
+       - Ícones: troque as imagens dentro de "images/" pelos ícones finais
+  ========================================================== -->
+  <section class="features">
+    <div class="container">
 
-      <div class="cards">
+      <h2 class="section-title section-title--left">Nossos <strong>Recursos</strong></h2>
 
-        <!-- Card Personalização -->
-        <div class="card">
-          <div class="card__icon">
-            <img src="assets/plantinha.png" alt="Ícone de planta" class="card__img" />
+      <div class="features__grid">
+
+        <article class="feature-card">
+          <img src="assets/planta.png" alt="" class="feature-card__icon" aria-hidden="true">
+          <h3 class="feature-card__title">Personalização</h3>
+          <p class="feature-card__text">Crie composições únicas com diferentes plantas, musgos e estilos</p>
+        </article>
+
+        <article class="feature-card">
+          <img src="assets/calular.png" alt="" class="feature-card__icon" aria-hidden="true">
+          <h3 class="feature-card__title">Visualização em AR</h3>
+          <p class="feature-card__text">Veja sua criação no ambiente</p>
+        </article>
+
+        <article class="feature-card">
+          <img src="assets/gota.png" alt="" class="feature-card__icon" aria-hidden="true">
+          <h3 class="feature-card__title">Cuidados</h3>
+          <p class="feature-card__text">Dicas personalizadas de rega, luz e manutenção</p>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================
+       CTA FINAL — "Pronto para transformar seu espaço?"
+       - Mockup: troque "images/mockup-cta.png"
+       - Link "Experimentar grátis": troque href="#" pelo link do TestFlight
+  ========================================================== -->
+  <section class="cta">
+    <div class="container cta__inner">
+
+      <div class="cta__content">
+        <h2 class="cta__title">
+          Pronto para<br>
+          <strong>transformar seu espaço?</strong>
+        </h2>
+
+        <p class="cta__text">Baixe agora no TestFlight e seja um dos primeiros a experimentar.</p>
+
+        <!-- TROCAR AQUI: link do TestFlight -->
+        <a href="#" class="cta__link">Experimentar grátis</a>
+      </div>
+
+      <div class="cta__image">
+        <!-- TROCAR AQUI: print/mockup do app -->
+        <img src="assets/mockupTres.png" alt="Mão segurando celular com o app JARDINO aberto">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================
+       FAQ — Perguntas frequentes
+       - Edite as perguntas/respostas dentro de cada <details>
+  ========================================================== -->
+  <section class="faq">
+    <div class="container">
+
+      <div class="faq__grid">
+
+        <details class="faq-item">
+          <summary>
+            <span class="faq-item__question">O que é o <strong>JARDINO</strong>?</span>
+            <span class="faq-item__icon" aria-hidden="true">⌄</span>
+          </summary>
+          <div class="faq-item__answer">
+            <p>O JARDINO é um app que ajuda você a montar composições de plantas, vasos e musgos personalizadas e a visualizá-las no seu ambiente em Realidade Aumentada.</p>
           </div>
-          <h3 class="card__title">Personalização</h3>
-          <p class="card__desc">
-            Crie kokedamas únicas com diferentes plantas,
-            musgos e estilos
-          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            <span class="faq-item__question">Como funciona a <strong>Realidade Aumentada?</strong></span>
+            <span class="faq-item__icon" aria-hidden="true">⌄</span>
+          </summary>
+          <div class="faq-item__answer">
+            <p>Basta apontar a câmera do seu celular para o espaço desejado e o JARDINO projeta a composição de plantas escolhida em tempo real.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            <span class="faq-item__question">O app é <strong>gratuito?</strong></span>
+            <span class="faq-item__icon" aria-hidden="true">⌄</span>
+          </summary>
+          <div class="faq-item__answer">
+            <p>Sim! O JARDINO está disponível gratuitamente durante a fase de testes no TestFlight.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            <span class="faq-item__question">Posso utilizar em <strong>apartamentos pequenos?</strong></span>
+            <span class="faq-item__icon" aria-hidden="true">⌄</span>
+          </summary>
+          <div class="faq-item__answer">
+            <p>Sim! O JARDINO sugere composições e plantas ideais para qualquer tipo de espaço, do maior ao mais compacto.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            <span class="faq-item__question">O app ajuda no <strong>cuidado das plantas?</strong></span>
+            <span class="faq-item__icon" aria-hidden="true">⌄</span>
+          </summary>
+          <div class="faq-item__answer">
+            <p>Sim! Cada planta cadastrada recebe dicas personalizadas de rega, adubação, luz e manutenção.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            <span class="faq-item__question">O JARDINO envia <strong>lembretes?</strong></span>
+            <span class="faq-item__icon" aria-hidden="true">⌄</span>
+          </summary>
+          <div class="faq-item__answer">
+            <p>Sim! Você recebe notificações com lembretes de rega e adubação para manter suas plantas sempre saudáveis.</p>
+          </div>
+        </details>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================
+       FOOTER
+       - Redes sociais e contato: edite os links abaixo
+  ========================================================== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <img src="assets/logo.png" alt="Logo JARDINO" class="footer__logo-img">
+          <span class="footer__logo-text">JARDINO</span>
+        </div>
+        <p class="footer__tagline">Descubra sua planta ideal</p>
+      </div>
+
+      <div class="footer__links">
+
+        <div class="footer__col">
+          <h4>siga-nos</h4>
+          <!-- TROCAR AQUI: link do Instagram -->
+          <a href="#" class="footer__contact">
+            <span class="footer__icon" aria-hidden="true">◎</span> @jardino.app
+          </a>
         </div>
 
-        <!-- Card Visualização em AR -->
-        <div class="card">
-          <div class="card__icon">
-
-            <img src="assets/celular.png" alt="Ícone de celular" class="card__img" />
-          </div>
-          <h3 class="card__title">Visualização em AR</h3>
-          <p class="card__desc">Veja sua criação no ambiente</p>
-        </div>
-
-        <!-- Card Cuidados -->
-        <div class="card">
-          <div class="card__icon">
-  
-            <img src="assets/gota.png" alt="Ícone de gota" class="card__img" />
-          </div>
-          <h3 class="card__title">Cuidados</h3>
-          <p class="card__desc">
-            Dicas personalizadas de rega, luz e manutenção
-          </p>
+        <div class="footer__col">
+          <h4>ajuda &amp; suporte</h4>
+          <!-- TROCAR AQUI: e-mail de contato -->
+          <a href="mailto:jardinoapp@gmail.com" class="footer__contact">jardinoapp@gmail.com</a>
         </div>
 
       </div>
+
     </div>
-  </section>
-
-<!-- call to action final -->
-  <section class="cta-final">
-    <div class="cta-final__inner">
-      <h2 class="cta-final__title">Pronto para transformar seu espaço?</h2>
-      <p class="cta-final__sub">
-        Baixe agora no TestFlight e seja um dos primeiros a experimentar.
-      </p>
-      <!-- substituir o href="#" pelo link do testFlight -->
-      <a href="https://testflight.apple.com/join/9m7BkkvJ" class="btn btn--white">Baixar no TestFlight</a>
-    </div>
-  </section>
-
-
-  <!-- FOOTER-->
-  <footer class="footer">
-    <p class="footer__logo">
-      <span class="logo-bold">KÔKE</span><span class="logo-light">Studio</span>
-    </p>
-    <p class="footer__copy">© 2026 KÔKEStudio. Todos os direitos reservados.</p>
   </footer>
 
 </body>
