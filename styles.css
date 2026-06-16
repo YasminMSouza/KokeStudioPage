@@ -177,7 +177,6 @@ body {
 ========================================================= */
 .hero {
   position: relative;
-  overflow: hidden;
   padding: 60px 0 100px;
 }
 
@@ -231,8 +230,6 @@ body {
   max-width: 400px;
 
   position: relative;
-
-  transform: rotate(-22deg);
 
   margin-top: -140px;
   margin-right: -120px;
